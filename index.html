@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo">Ishimura Haruya</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#works">Works</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="top" class="hero">
+      <div class="container hero__inner">
+        <p class="hero__eyebrow">Portfolio</p>
+        <h1 class="hero__title">Hello, I'm <span>Ishimura Haruya</span></h1>
+        <p class="hero__lead">Web Developer / Designer</p>
+        <a href="#works" class="button">View Works</a>
+        <img
+          class="hero__image"
+          src="https://images.unsplash.com/photo-1697016938260-00688cca27f8?fm=jpg&q=80&w=1600&auto=format&fit=crop"
+          alt="トゥールビヨン機構のアップ"
+        >
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section__title">About</h2>
+        <p class="section__lead">
+          はじめまして、石村陽哉です。<br>
+          ランディングページ（LP）の制作を専門としています。<br>
+          誰かの真似ではない、唯一無二の独創的なサイトを創ることが自分の強みです。<br>
+          これまでに手がけたサイトはWorksセクションでご覧いただけます。<br>
+          制作のご相談・お問い合わせはContactセクションからお気軽にどうぞ。<br>
+          あなたらしさが伝わる1枚を、一緒に形にします。
+        </p>
+      </div>
+    </section>
+
+    <section id="works" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Works</h2>
+        <div class="grid">
+          <a class="card" href="../tori-coffee-lp/index.html" target="_blank" rel="noopener">
+            <div class="card__thumb">
+              <img
+                src="https://images.unsplash.com/photo-1635191535841-a6d4d88e1612?fm=jpg&q=80&w=800&auto=format&fit=crop"
+                alt="湯気の立つコーヒーカップ"
+              >
+            </div>
+            <h3 class="card__title">TORI COFFEE</h3>
+            <p class="card__text">自家焙煎カフェのランディングページ。</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section__title">Skills</h2>
+        <ul class="skills">
+          <li>HTML / CSS</li>
+          <li>JavaScript</li>
+          <li>Git / GitHub</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section section--alt">
+      <div class="container contact__inner">
+        <div class="contact__text">
+          <h2 class="section__title">Contact</h2>
+          <p class="section__lead">お問い合わせはこちらから。</p>
+        </div>
+        <div class="contact__action">
+          <a href="mailto:h3176784@gmail.com" class="button">Email Me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Ishimura Haruya. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
