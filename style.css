@@ -99,16 +99,6 @@ a {
   margin-bottom: 32px;
 }
 
-.hero__image {
-  width: 100%;
-  max-width: 480px;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 16px;
-  margin: 40px auto 0;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
-}
-
 .button {
   display: inline-block;
   background: var(--color-accent);
