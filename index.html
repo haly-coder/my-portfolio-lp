@@ -3,96 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Ishimura Haruya — Web Developer / Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container header__inner">
-      <a href="#top" class="logo">Ishimura Haruya</a>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#works">Works</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
+  <div class="grain" data-grain></div>
+  <div class="grid-lines"></div>
+
+  <div class="intro" data-intro>
+    <div class="intro__mask">
+      <div class="intro__title">ISHIMURA HARUYA</div>
     </div>
-  </header>
+    <div class="intro__bar"></div>
+  </div>
 
-  <main>
-    <section id="top" class="hero">
-      <div class="container hero__inner">
-        <p class="hero__eyebrow">Portfolio</p>
-        <h1 class="hero__title">Hello, I'm <span>Ishimura Haruya</span></h1>
-        <p class="hero__lead">Web Developer / Designer</p>
-        <a href="#works" class="button">View Works</a>
+  <nav class="nav">
+    <a href="#top" class="nav__logo">IH<span class="acc">.</span></a>
+    <div class="nav__links">
+      <a href="#about" data-mag>About</a>
+      <a href="#works" data-mag>Works</a>
+      <a href="#services" data-mag>What I do</a>
+      <a href="#contact" data-mag>Contact</a>
+    </div>
+  </nav>
+
+  <section id="top" class="hero">
+    <div class="hero__par" data-par="0.16">
+      <div class="hero__meta-wrap">
+        <div class="hero__meta">Landing page specialist — Based in Japan — 2026</div>
       </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="container about__inner">
-        <div class="about__text">
-          <h2 class="section__title">About</h2>
-          <p class="section__lead">
-            はじめまして、石村陽哉です。<br>
-            ランディングページ（LP）の制作を専門としています。<br>
-            誰かの真似ではない、唯一無二の独創的なサイトを創ることが自分の強みです。<br>
-            これまでに手がけたサイトはWorksセクションでご覧いただけます。<br>
-            制作のご相談・お問い合わせはContactセクションからお気軽にどうぞ。<br>
-            あなたらしさが伝わる1枚を、一緒に形にします。
-          </p>
-        </div>
-        <img class="about__image" src="images/profile.jpg" alt="石村陽哉">
+      <h1 class="hero__title">
+        <span class="reveal-line"><span class="reveal-line__inner reveal-line__inner--1">Not a</span></span>
+        <span class="reveal-line"><span class="reveal-line__inner reveal-line__inner--2">Template<span class="acc">.</span></span></span>
+      </h1>
+    </div>
+    <div class="hero__bottom">
+      <p class="hero__statement">誰かの真似ではない、あなたのための1枚を。<br>ランディングページの設計・デザイン・実装まで、ひとりで走りきります。</p>
+      <div class="hero__signature">
+        <div class="hero__signature-name">石村陽哉 / Ishimura Haruya</div>
+        <div>Web Developer / Designer</div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="works" class="section section--alt">
-      <div class="container">
-        <h2 class="section__title">Works</h2>
-        <div class="grid">
-          <a class="card" href="https://haly-coder.github.io/Tori-coffee-LP/" target="_blank" rel="noopener">
-            <div class="card__thumb">
-              <img
-                src="https://images.unsplash.com/photo-1635191535841-a6d4d88e1612?fm=jpg&q=80&w=800&auto=format&fit=crop"
-                alt="湯気の立つコーヒーカップ"
-              >
-            </div>
-            <h3 class="card__title">TORI COFFEE</h3>
-            <p class="card__text">自家焙煎カフェのランディングページ。</p>
-          </a>
-        </div>
-      </div>
-    </section>
+  <div class="marquee">
+    <div class="marquee__track">
+      <span class="marquee__item">Landing page <span class="acc">—</span> Design <span class="acc">—</span> Development <span class="acc">—</span>&nbsp;</span>
+      <span class="marquee__item" aria-hidden="true">Landing page <span class="acc">—</span> Design <span class="acc">—</span> Development <span class="acc">—</span>&nbsp;</span>
+    </div>
+  </div>
 
-    <section id="skills" class="section">
-      <div class="container">
-        <h2 class="section__title">Skills</h2>
-        <ul class="skills">
-          <li>HTML / CSS</li>
-          <li>JavaScript</li>
-          <li>Git / GitHub</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="contact" class="section section--alt">
-      <div class="container contact__inner">
-        <div class="contact__text">
-          <h2 class="section__title">Contact</h2>
-          <p class="section__lead">お問い合わせはこちらから。</p>
-        </div>
-        <div class="contact__action">
-          <a href="mailto:h3176784@gmail.com" class="button">Email Me</a>
+  <section id="about" class="about">
+    <div class="about__grid">
+      <div class="about__media reveal" data-reveal>
+        <div class="mono-label acc-t">01 / About</div>
+        <div class="about__image-frame">
+          <div class="placeholder-label">/images/profile.jpg</div>
+          <img class="about__image" src="images/profile.jpg" alt="石村陽哉" loading="lazy" onerror="this.style.display='none'">
         </div>
       </div>
-    </section>
-  </main>
+      <div class="about__content reveal reveal--delay-1" data-reveal>
+        <h2 class="about__title">One of<br>one<span class="acc">.</span></h2>
+        <p class="about__text">ランディングページ（LP）の制作を専門としています。誰かの真似ではない、唯一無二の独創的なサイトを創ることが自分の強みです。あなたらしさが伝わる1枚を、一緒に形にします。</p>
+        <div class="skills">
+          <span class="skills__tag">HTML</span>
+          <span class="skills__tag">CSS</span>
+          <span class="skills__tag">JavaScript</span>
+          <span class="skills__tag">Git</span>
+          <span class="skills__tag">GitHub</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Ishimura Haruya. All rights reserved.</p>
+  <section id="works" class="works">
+    <div class="works__inner">
+      <div class="works__header mono-label">
+        <span class="acc-t">02 / Selected work</span>
+        <span class="muted">01 project</span>
+      </div>
+
+      <div class="works__list">
+        <a href="https://haly-coder.github.io/Tori-coffee-LP/" target="_blank" rel="noopener" class="work reveal" data-work data-reveal>
+          <div class="work__media">
+            <div class="placeholder-label">/images/works/tori-coffee.jpg</div>
+            <img class="work__image" src="images/works/tori-coffee.jpg" alt="TORI COFFEE LP" loading="lazy" data-workimg onerror="this.style.display='none'">
+            <div class="work__title">Tori<br>Coffee</div>
+          </div>
+          <div class="work__meta mono-label">
+            <span class="work__meta-name">自家焙煎カフェ TORI COFFEE — LP</span>
+            <span>Landing page</span>
+            <span>Design &amp; Development</span>
+            <span>2025</span>
+            <span class="acc-t">Visit ↗</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="works__more reveal" data-reveal>
+        <div class="works__more-title">More<br>coming<br>soon</div>
+        <p class="works__more-text">次の1枚を制作中です。案件のご相談はいつでも受け付けています。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="services__inner">
+      <div class="mono-label acc-t">03 / What I do</div>
+      <div class="services__list">
+        <div class="service-row reveal" data-reveal data-row>
+          <div class="service-row__title">Strategy</div>
+          <p class="service-row__text">誰に何を伝えるページなのかを整理し、構成とコピーの骨組みから設計します。</p>
+        </div>
+        <div class="service-row service-row--delay-1 reveal" data-reveal data-row>
+          <div class="service-row__title">Design</div>
+          <p class="service-row__text">タイポグラフィと余白で「らしさ」をつくる。テンプレートに寄せないビジュアル設計。</p>
+        </div>
+        <div class="service-row service-row--delay-2 service-row--last reveal" data-reveal data-row>
+          <div class="service-row__title">Development</div>
+          <p class="service-row__text">HTML / CSS / JavaScript で実装。表示速度とレスポンシブを最後まで詰めます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="contact">
+    <div class="contact__inner">
+      <div class="reveal" data-reveal>
+        <div class="mono-label acc-t">04 / Contact</div>
+        <h2 class="contact__title">Let's build<br>your page<span class="acc">.</span></h2>
+        <a href="mailto:h3176784@gmail.com" class="contact__mail" data-mail>h3176784@gmail.com</a>
+      </div>
+      <div class="contact__foot mono-label">
+        <span>© 2026 Ishimura Haruya</span>
+        <a href="#top">Back to top ↑</a>
+      </div>
     </div>
   </footer>
+
+  <div class="cursor" data-cursor>
+    <div class="cursor__dot" data-cursordot>
+      <span class="cursor__label" data-cursorlabel>View</span>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
