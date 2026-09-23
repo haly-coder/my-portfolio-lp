@@ -20,6 +20,73 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => reveal.forEach(show), 4000);
   }
 
+  // Works marquee: auto-scrolls, pauses and becomes manually scrollable on hover/touch
+  const worksScroll = document.querySelector('.works__scroll');
+  const worksList = document.querySelector('.works__list');
+  if (worksScroll && worksList) {
+    let isPaused = false;
+    let isDragging = false;
+    let dragStartX = 0;
+    let dragStartScroll = 0;
+    let dragMoved = 0;
+    const speed = reduced ? 0 : 0.6; // px per frame
+
+    const wrap = () => {
+      const max = worksList.scrollWidth - worksScroll.clientWidth;
+      if (max <= 0) return;
+      if (worksScroll.scrollLeft >= max) worksScroll.scrollLeft = 0;
+      else if (worksScroll.scrollLeft < 0) worksScroll.scrollLeft = max;
+    };
+
+    const tick = () => {
+      if (!isPaused && !isDragging && speed > 0) {
+        worksScroll.scrollLeft += speed;
+        wrap();
+      }
+      requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+
+    worksScroll.addEventListener('mouseenter', () => { isPaused = true; });
+    worksScroll.addEventListener('mouseleave', () => { isPaused = false; });
+
+    // Convert vertical wheel input into horizontal scroll for easy manual control
+    worksScroll.addEventListener('wheel', (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        worksScroll.scrollLeft += e.deltaY;
+        wrap();
+        e.preventDefault();
+      }
+    }, { passive: false });
+
+    // Click-and-drag scrolling
+    worksScroll.addEventListener('pointerdown', (e) => {
+      isDragging = true;
+      dragMoved = 0;
+      dragStartX = e.clientX;
+      dragStartScroll = worksScroll.scrollLeft;
+      worksScroll.setPointerCapture(e.pointerId);
+    });
+    worksScroll.addEventListener('pointermove', (e) => {
+      if (!isDragging) return;
+      const dx = e.clientX - dragStartX;
+      dragMoved = Math.abs(dx);
+      worksScroll.scrollLeft = dragStartScroll - dx;
+      wrap();
+    });
+    const endDrag = () => { isDragging = false; };
+    worksScroll.addEventListener('pointerup', endDrag);
+    worksScroll.addEventListener('pointercancel', endDrag);
+
+    // Suppress the click-through navigation when the pointerdown was actually a drag
+    worksScroll.addEventListener('click', (e) => {
+      if (dragMoved > 6) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    }, true);
+  }
+
   // Hero parallax (transform/opacity only, rAF-throttled)
   const par = document.querySelector('[data-par]');
   if (par && !reduced) {
